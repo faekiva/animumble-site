@@ -1,17 +1,27 @@
 {
-  "name": "filebase-upload",
+  "name": "animumble-site",
   "version": "1.0.0",
   "description": "",
+  "main": "index.js",
   "scripts": {
-    "build": "tsc",
-    "watch": "tsc -w",
-    "prestart": "npm run build",
-    "start": "func start",
-    "test": "echo \"No tests yet...\""
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StrollingFellow/animumble-site.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/StrollingFellow/animumble-site/issues"
+  },
+  "homepage": "https://github.com/StrollingFellow/animumble-site#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.2"
+  },
   "devDependencies": {
-    "@azure/functions": "^1.0.2-beta2",
-    "typescript": "^3.3.3"
+    "hbs-cli": "^1.4.0"
   }
 }
