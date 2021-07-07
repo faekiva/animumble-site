@@ -1,0 +1,31 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Directory</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each directories}}
+    <tr>
+      <td><a href="./{{Path}}{{ObjectName}}"><span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span> {{ObjectName}}</a></td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+<br/>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">File</th>
+      <th scope="col">Download</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each files}}
+    <tr>
+      <td>{{ObjectName}}</td>
+      <td><a href="https://api.leftist.gay/files/download/{{Path}}{{ObjectName}}">Download</a></td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
