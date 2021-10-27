@@ -8,12 +8,12 @@
   </thead> --}}
   <tbody>
     {{#each fileSystem}}
-    {{#unless IsDirectory }}
+    {{#unless this.IsDirectory }}
     <tr>
       <td><a href="https://api.leftist.gay/files/download/{{this.Path}}{{this.ObjectName}}">{{this.ObjectName}}</a></td>
     </tr>
     {{/unless}}
-    {{#if IsDirectory }}
+    {{#if this.IsDirectory }}
     <tr>
       <td><a href="/{{this.Path}}{{this.ObjectName}}">{{this.ObjectName}}</a><</td>
     </tr>
