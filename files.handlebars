@@ -1,0 +1,23 @@
+
+<table class="table">
+  {{!-- <thead>
+    <tr>
+      <th scope="col">File</th>
+      <th scope="col">Download</th>
+    </tr>
+  </thead> --}}
+  <tbody>
+    {{#each @root}}
+    {{#unless isDirectory }}
+    <tr>
+      <td><a href="https://api.leftist.gay/files/download/{{Path}}{{ObjectName}}">{{ObjectName}}</a></td>
+    </tr>
+    {{/unless}}
+    {{#if isDirectory }}
+    <tr>
+      <td><a href="/{{Path}}{{ObjectName}}">{{ObjectName}}</a><</td>
+    </tr>
+    {{/if}}
+    {{/each}}
+  </tbody>
+</table>
