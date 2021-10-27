@@ -22,7 +22,7 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script>
       const populate = async () => {
-        let response = await axios.get(`https://api.leftist.gay/files/query${window.location.pathname}`)
+        let response = await axios.get(`https://api.leftist.gay/files/query${window.location.pathname}`).data
         var template = Handlebars.templates.files;
         document.getElementById('file-table').innerHTML = template(response)
       }
