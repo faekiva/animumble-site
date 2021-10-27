@@ -10,12 +10,12 @@
     {{#each @root}}
     {{#unless IsDirectory }}
     <tr>
-      <td><a href="https://api.leftist.gay/files/download/{{Path}}{{ObjectName}}">{{ObjectName}}</a></td>
+      <td><a href="https://api.leftist.gay/files/download/{{this.Path}}{{this.ObjectName}}">{{this.ObjectName}}</a></td>
     </tr>
     {{/unless}}
     {{#if IsDirectory }}
     <tr>
-      <td><a href="/{{Path}}{{ObjectName}}">{{ObjectName}}</a><</td>
+      <td><a href="/{{this.Path}}{{this.ObjectName}}">{{this.ObjectName}}</a><</td>
     </tr>
     {{/if}}
     {{/each}}
