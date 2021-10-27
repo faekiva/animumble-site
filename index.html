@@ -21,9 +21,12 @@
     <script src="files.precompiled.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script>
-      let response = await axios.get(`https://api.leftist.gay/files/query/${window.location.pathname}`)
-      var template = Handlebars.templates.files;
-      document.getElementById('file-table').innerHTML = template(response)
+      const populate = async () => {
+        let response = await axios.get(`https://api.leftist.gay/files/query/${window.location.pathname}`)
+        var template = Handlebars.templates.files;
+        document.getElementById('file-table').innerHTML = template(response)
+      }
+      populate();
     </script>
 </body>
 
